@@ -87,6 +87,7 @@ gem 'jwt', '~> 1.5.1'
 gem 'lograge'
 gem 'public_suffix' # Needed currently to set GA hostname right, probably not
                     # needed anymore when GA script updated.
+gem 'faraday', '~> 0.9.1'
 
 group :staging, :production do
   gem 'newrelic_rpm', '~> 3.9.1.236'
