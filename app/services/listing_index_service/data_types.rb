@@ -47,15 +47,15 @@ module ListingIndexService::DataTypes
   )
 
   Listing = EntityUtils.define_builder(
-    [:id, :fixnum, :mandatory],
+    [:id, :fixnum, :mandatory, :to_integer],
     [:url, :string, :mandatory],
     [:title, :string, :mandatory],
     [:description, :string],
     [:category_id, :fixnum, :mandatory],
     [:author, entity: Author],
     [:listing_images, collection: ListingImage],
-    [:updated_at, :time, :mandatory],
-    [:created_at, :time, :mandatory],
+    [:updated_at, :time, :mandatory, str_to_time: "%Y-%m-%dT%H:%M:%S.%L%z"], # 2014-12-08T20:51:29.000+0200
+    [:created_at, :time, :mandatory, str_to_time: "%Y-%m-%dT%H:%M:%S.%L%z"],
     [:latitude],
     [:longitude],
     [:address, :string],
