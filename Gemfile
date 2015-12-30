@@ -64,7 +64,6 @@ gem "devise-encryptable"
 gem "omniauth-facebook", "~> 2.0.1"
 gem 'rake'
 gem 'xpath'
-gem 'dynamic_form'
 gem "truncate_html"
 gem 'money-rails'
 
